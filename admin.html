@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GiftMe Admin</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+
+    <div class="container">
+      <div class="card adminCard">
+        <h1>Add New Gift</h1>
+        <p class="subtitle">Fill in the details below to add a gift.</p>
+
+        <form id="giftForm">
+          <div class="formGroup">
+            <label>Gift Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Sony WH-1000XM5"
+              required
+            />
+          </div>
+
+          <div class="formGroup">
+            <label>Description</label>
+            <textarea
+              id="description"
+              rows="4"
+              placeholder="Gift Description"
+              required
+            ></textarea>
+          </div>
+
+          <div class="row">
+            <div class="formGroup">
+              <label>Price (₹)</label>
+              <input type="number" id="price" placeholder="24999" required />
+            </div>
+
+            <div class="formGroup">
+              <label>Image URL</label>
+              <input
+                type="text"
+                id="image"
+                placeholder="https://..."
+                required
+              />
+            </div>
+          </div>
+          <div class="preview" id="preview">Image Preview</div>
+          <div class="formGroup">
+            <label>Buy Link</label>
+            <input
+              type="text"
+              id="buyLink"
+              placeholder="https://amazon.in/..."
+              required
+            />
+          </div>
+
+          <div class="row">
+            <div class="formGroup">
+              <label>Minimum Age</label>
+              <input type="number" id="minAge" placeholder="18" required />
+            </div>
+
+            <div class="formGroup">
+              <label>Maximum Age</label>
+              <input type="number" id="maxAge" placeholder="50" required />
+            </div>
+          </div>
+
+          <div class="formGroup">
+            <label>Relationships</label>
+
+            <div class="checkboxGrid">
+              <label
+                ><input type="checkbox" name="relationship" value="Partner" />
+                Partner</label
+              >
+
+              <label
+                ><input type="checkbox" name="relationship" value="Friend" />
+                Friend</label
+              >
+
+              <label
+                ><input type="checkbox" name="relationship" value="Brother" />
+                Brother</label
+              >
+
+              <label
+                ><input type="checkbox" name="relationship" value="Sister" />
+                Sister</label
+              >
+
+              <label
+                ><input type="checkbox" name="relationship" value="Mother" />
+                Mother</label
+              >
+
+              <label
+                ><input type="checkbox" name="relationship" value="Father" />
+                Father</label
+              >
+            </div>
+          </div>
+
+          <div class="formGroup">
+            <label>Occasions</label>
+
+            <div class="checkboxGrid">
+              <label
+                ><input type="checkbox" name="occasion" value="Birthday" />
+                Birthday</label
+              >
+
+              <label
+                ><input type="checkbox" name="occasion" value="Christmas" />
+                Christmas</label
+              >
+
+              <label
+                ><input type="checkbox" name="occasion" value="Anniversary" />
+                Anniversary</label
+              >
+
+              <label
+                ><input
+                  type="checkbox"
+                  name="occasion"
+                  value="Raksha Bandhan"
+                />
+                Raksha Bandhan</label
+              >
+
+              <label
+                ><input type="checkbox" name="occasion" value="Karwa Chauth" />
+                Karwa Chauth</label
+              >
+
+              <label
+                ><input type="checkbox" name="occasion" value="Durga Puja" />
+                Durga Puja</label
+              >
+            </div>
+          </div>
+
+          <div class="formGroup">
+            <label>Hobbies</label>
+
+            <div class="checkboxGrid">
+              <label
+                ><input type="checkbox" name="hobby" value="Creative" />
+                Creative</label
+              >
+
+              <label
+                ><input type="checkbox" name="hobby" value="Music" />
+                Music</label
+              >
+
+              <label
+                ><input type="checkbox" name="hobby" value="Gaming" />
+                Gaming</label
+              >
+
+              <label
+                ><input type="checkbox" name="hobby" value="Fashion" />
+                Fashion</label
+              >
+
+              <label
+                ><input type="checkbox" name="hobby" value="Art & Décor" /> Art
+                & Décor</label
+              >
+
+              <label
+                ><input type="checkbox" name="hobby" value="Spiritual" />
+                Spiritual</label
+              >
+
+              <label
+                ><input type="checkbox" name="hobby" value="Devotional" />
+                Devotional</label
+              >
+            </div>
+          </div>
+
+          <div class="formGroup">
+            <label>Availability</label>
+
+            <select id="inStock">
+              <option value="true">In Stock</option>
+
+              <option value="false">Out of Stock</option>
+            </select>
+          </div>
+
+          <button type="submit" class="submitBtn">Add Gift</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

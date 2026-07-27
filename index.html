@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GiftMe</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+
+    <div class="container">
+      <div class="card">
+        <div class="progress">
+          <div id="progressBar"></div>
+        </div>
+
+        <div id="content">
+          <!-- JS renders here -->
+        </div>
+      </div>
+    </div>
+    <template id="welcome">
+      <nav class="navbar">
+        <h2>GiftMe</h2>
+
+        <div>
+          <a href="index.html">Home</a>
+
+          <a href="admin.html">Add Gift</a>
+        </div>
+      </nav>
+
+      <div class="welcome">
+        <h1>GiftMe</h1>
+
+        <p>Find the perfect gift in under a minute.</p>
+
+        <button id="startBtn">Get Started</button>
+      </div>
+    </template>
+
+    <template id="question">
+      <div class="questionPage">
+        <h2 id="questionTitle"></h2>
+
+        <div id="options"></div>
+
+        <div id="inputContainer"></div>
+
+        <button id="nextBtn">Next</button>
+      </div>
+    </template>
+
+    <template id="loading">
+      <div class="loading">
+        <div class="loader"></div>
+
+        <h2>Finding perfect gifts...</h2>
+      </div>
+    </template>
+
+    <template id="results">
+      <div>
+        <div class="topBar">
+          <h2>Recommended Gifts</h2>
+
+          <button id="restartBtn">Start Again</button>
+        </div>
+
+        <div id="giftGrid"></div>
+      </div>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
